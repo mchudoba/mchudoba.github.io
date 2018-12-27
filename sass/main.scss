@@ -1,0 +1,347 @@
+
+
+@mixin padding {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+@mixin margin {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+@mixin flex {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin animated-bg {
+    background: linear-gradient(-45deg, #001647, #11487d, #337fa6, #5fc8bd);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+// mobile breakpoint
+
+$for-mobile: "(max-width: 414px)";
+
+
+body {
+    @include animated-bg;
+    margin: 0;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    @include padding;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    margin-top: 50px;
+    padding-top: 50px;
+    margin-bottom: 1rem;
+
+    @media #{$for-mobile}  {
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+    }
+}
+
+span {
+    display: block;
+    color: #fff;
+    line-height: 1.5rem;
+
+    @media #{$for-mobile}  {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+}
+
+nav {
+
+    background: #333;
+    opacity: .85;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    right: 0;
+
+    .logo, ul {
+        display: inline-block;
+    }
+
+    .logo img {
+        padding-top: 5px;
+        @include padding;
+    }
+
+    @media #{$for-mobile}  {
+
+        .logo {
+            display: none;
+        }
+
+        ul {
+            display: block;
+        }
+
+    }
+
+    ul {
+
+        list-style: none;
+        padding: 1rem;
+        text-transform: uppercase;
+        float: right;
+        margin: 0;
+
+        @media #{$for-mobile} {
+            text-align: center;
+            float: none;
+        }
+
+        li {
+
+            display: inline-block;
+            padding: 0 8px;
+            letter-spacing: .1rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    color: #a2a3a5;
+                    text-decoration: none;
+                }
+
+                @media #{$for-mobile}  {
+                    font-size: 1.5rem;
+                }
+
+            }
+
+        }
+
+        li.landing-link {
+            font-weight: 700;
+        }
+
+    }
+}
+
+.home-page, .about-page {
+    @include flex;
+    width: 100%;
+    height: 90vh;
+}
+
+// Home Page
+
+
+
+// About Page
+
+.about-page {
+    
+    span {
+        @include padding;
+    }
+
+    form {
+        display: inline-block;
+        padding-bottom: 8px;
+
+        @media #{$for-mobile} {
+            display: block;
+            margin: 18px 2rem;
+        }
+
+    }
+
+    .btn {
+
+        display: inline-block;
+        color: #fff;
+        font-size: 1rem;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 14px 2rem;
+        margin: 1rem 0 0 0;
+
+        &.resume {
+            margin: 1rem 1rem 0 2rem;
+
+            @media #{$for-mobile} {
+                margin: 0 auto;
+                padding: 16px 2rem;
+            }
+
+        }
+
+        @media #{$for-mobile} {
+            display: block;
+            font-size: 18px;
+            width: 100%;
+            padding: 16px 2rem;
+        }
+
+        &:hover {
+            opacity: .75;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.about-page-bg {
+    background-image: url('../img/about.png');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+
+// Projects Page
+
+.work-page {
+
+    @include padding;
+
+    @media #{$for-mobile} {
+        background: linear-gradient(-45deg, #001647, #11487d, #337fa6, #5fc8bd);
+        margin-top: -50px;
+        padding-top: 4rem;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 2rem;
+
+        @media (max-width:  640px) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+        .description {
+
+             @media (max-width:  640px) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+        }
+
+    .project {
+
+        &:first-of-type {
+            padding-top: 1rem;
+        }
+
+        border-bottom: 1px solid #a2a3a5;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        @media #{$for-mobile} {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        .thumbnail {
+            // @include padding;
+            margin: 0 auto;
+
+            img {
+                max-width: 300px;
+            }
+
+        }
+
+        h2 {
+
+            font-family: 'Fira Mono', monospace;
+
+            a {
+                color: #a2a3a5;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: .75;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+}
+
+    // Helper Classes
+
+    .hide {
+        display: none;
+    }
+      
+    
+    // Animations
+
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }

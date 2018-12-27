@@ -1,0 +1,313 @@
+/* line 33, ../sass/main.scss */
+body {
+  background: linear-gradient(-45deg, #001647, #11487d, #337fa6, #5fc8bd);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+}
+
+/* line 42, ../sass/main.scss */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* line 47, ../sass/main.scss */
+h1 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: .1rem;
+  margin-top: 50px;
+  padding-top: 50px;
+  margin-bottom: 1rem;
+}
+@media (max-width: 414px) {
+  /* line 47, ../sass/main.scss */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* line 63, ../sass/main.scss */
+span {
+  display: block;
+  color: #fff;
+  line-height: 1.5rem;
+}
+@media (max-width: 414px) {
+  /* line 63, ../sass/main.scss */
+  span {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* line 75, ../sass/main.scss */
+nav {
+  background: #333;
+  opacity: .85;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+/* line 85, ../sass/main.scss */
+nav .logo, nav ul {
+  display: inline-block;
+}
+/* line 89, ../sass/main.scss */
+nav .logo img {
+  padding-top: 5px;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+@media (max-width: 414px) {
+  /* line 96, ../sass/main.scss */
+  nav .logo {
+    display: none;
+  }
+  /* line 100, ../sass/main.scss */
+  nav ul {
+    display: block;
+  }
+}
+/* line 106, ../sass/main.scss */
+nav ul {
+  list-style: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  float: right;
+  margin: 0;
+}
+@media (max-width: 414px) {
+  /* line 106, ../sass/main.scss */
+  nav ul {
+    text-align: center;
+    float: none;
+  }
+}
+/* line 119, ../sass/main.scss */
+nav ul li {
+  display: inline-block;
+  padding: 0 8px;
+  letter-spacing: .1rem;
+}
+/* line 125, ../sass/main.scss */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 129, ../sass/main.scss */
+nav ul li a:hover {
+  color: #a2a3a5;
+  text-decoration: none;
+}
+@media (max-width: 414px) {
+  /* line 125, ../sass/main.scss */
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+}
+/* line 142, ../sass/main.scss */
+nav ul li.landing-link {
+  font-weight: 700;
+}
+
+/* line 149, ../sass/main.scss */
+.home-page, .about-page {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+
+/* line 163, ../sass/main.scss */
+.about-page span {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+/* line 167, ../sass/main.scss */
+.about-page form {
+  display: inline-block;
+  padding-bottom: 8px;
+}
+@media (max-width: 414px) {
+  /* line 167, ../sass/main.scss */
+  .about-page form {
+    display: block;
+    margin: 18px 2rem;
+  }
+}
+/* line 178, ../sass/main.scss */
+.about-page .btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 14px 2rem;
+  margin: 1rem 0 0 0;
+}
+/* line 189, ../sass/main.scss */
+.about-page .btn.resume {
+  margin: 1rem 1rem 0 2rem;
+}
+@media (max-width: 414px) {
+  /* line 189, ../sass/main.scss */
+  .about-page .btn.resume {
+    margin: 0 auto;
+    padding: 16px 2rem;
+  }
+}
+@media (max-width: 414px) {
+  /* line 178, ../sass/main.scss */
+  .about-page .btn {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    padding: 16px 2rem;
+  }
+}
+/* line 206, ../sass/main.scss */
+.about-page .btn:hover {
+  opacity: .75;
+  cursor: pointer;
+}
+
+/* line 215, ../sass/main.scss */
+.about-page-bg {
+  background-image: url("../img/about.png");
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+/* line 228, ../sass/main.scss */
+.work-page {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+@media (max-width: 414px) {
+  /* line 228, ../sass/main.scss */
+  .work-page {
+    background: linear-gradient(-45deg, #001647, #11487d, #337fa6, #5fc8bd);
+    margin-top: -50px;
+    padding-top: 4rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* line 240, ../sass/main.scss */
+.work-page .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+}
+@media (max-width: 640px) {
+  /* line 240, ../sass/main.scss */
+  .work-page .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  /* line 251, ../sass/main.scss */
+  .work-page .description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+/* line 260, ../sass/main.scss */
+.work-page .project {
+  border-bottom: 1px solid #a2a3a5;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+/* line 262, ../sass/main.scss */
+.work-page .project:first-of-type {
+  padding-top: 1rem;
+}
+@media (max-width: 414px) {
+  /* line 260, ../sass/main.scss */
+  .work-page .project {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+/* line 275, ../sass/main.scss */
+.work-page .project .thumbnail {
+  margin: 0 auto;
+}
+/* line 279, ../sass/main.scss */
+.work-page .project .thumbnail img {
+  max-width: 300px;
+}
+/* line 285, ../sass/main.scss */
+.work-page .project h2 {
+  font-family: 'Fira Mono', monospace;
+}
+/* line 289, ../sass/main.scss */
+.work-page .project h2 a {
+  color: #a2a3a5;
+  text-decoration: none;
+}
+/* line 293, ../sass/main.scss */
+.work-page .project h2 a:hover {
+  opacity: .75;
+  text-decoration: none;
+}
+
+/* line 306, ../sass/main.scss */
+.hide {
+  display: none;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
